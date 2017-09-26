@@ -4,9 +4,17 @@ block variables
     - var title = 'Добро пожаловать'
 
 block content
-
+    .header
+        button.header_btn
     main.main
-        
-    footer.footer
-        .footer__bottom.footer__bottom_opacity 
-            .footer__bottom-copyright © 
+        .main__block
+            a.main__link(href="#")
+                img(src="", alt="")
+            .main__button
+                button.btn.btn__link
+                    span.btn__title Оставить заявку
+    .modal-menu.menu
+        .menu__header
+            button.icon.icon__link
+        .menu__block
+            nav
