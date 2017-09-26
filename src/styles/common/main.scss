@@ -1,0 +1,14 @@
+html{
+    @include desktop{
+        font-size: 16px;
+    }
+    @include laptop{
+        font-size: 15px;
+    }
+    @include ipad{
+        font-size: 14px;
+    }
+    @include iphone{
+        font-size: 14px;
+    }
+}

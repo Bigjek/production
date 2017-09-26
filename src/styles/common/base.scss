@@ -1,0 +1,28 @@
+* , :after , :before{
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+}
+h1{
+    font-size: 63px;
+}
+h2{
+    font-size: 35px;
+}
+input, textarea{
+    outline: none;
+    border: 1px solid #fff;
+}
+button{
+    outline: none;
+}
+input, textarea{
+    &:focus{
+        border: 1px solid #7ba5ff;
+    }
+}
+ul, blockquote{
+    margin: 0;
+}
