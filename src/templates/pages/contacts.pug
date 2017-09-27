@@ -1,0 +1,43 @@
+extends ../template
+
+block variables
+    - var title = 'Связаться с нами'
+
+block content
+    include ../common/header
+    main.main
+        .contacts
+            aside.contacts__logo.logo
+                a.logo__link(href="#")
+                    img(src="", alt="")
+            article.contacts__content
+                p Если у Вас остались вопросы, свяжитесь с нами удобным для Вас способом и мы все обсудим принимаем звонки ежеднемно с 10:00 до 22:00, почта и мессенджеры – круглосуточно.
+                .contact
+                    ul.contact__list
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#call") 
+                            .contact__block
+                            a(href="tel:+78126434215" type="tel") +7 (812) 643–42–15
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#mail") 
+                            .contact__block 
+                                a(href="mailto:production@kino.rent" type="email") production@kino.rent
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#telegram") 
+                            .contact__block @kino.rentprod
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#maps") 
+                            .contact__block Санкт-Петербург, м.Петроградская, Каменноостровский пр. 26–28
+
+            .contacts__button
+                button.btn.btn__link
+                    span.btn__title Оставить заявку
+    include ../common/nav 

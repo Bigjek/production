@@ -1,0 +1,31 @@
+extends ../template
+
+block variables
+    - var title = 'Портфолио'
+
+block content
+    include ../common/header
+    main.main
+        ul.portfolio
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src='http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com', frameborder='0')
+                .portfolio__title Динамки
+                .portfolio__info 2017, Санкт-Петербург
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src='http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com', frameborder='0')
+                .portfolio__title Динамки
+                .portfolio__info 2017, Санкт-Петербург
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src='http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com', frameborder='0')
+                .portfolio__title Динамки
+                .portfolio__info 2017, Санкт-Петербург
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src='http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com', frameborder='0')
+                .portfolio__title Динамки
+                .portfolio__info 2017, Санкт-Петербург
+
+    include ../common/nav 

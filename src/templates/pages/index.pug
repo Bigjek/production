@@ -1,20 +1,15 @@
 extends ../template
 
 block variables
-    - var title = 'Добро пожаловать'
+    - var title = 'Главная'
 
 block content
-    .header
-        button.header_btn
+    include ../common/header
     main.main
-        .main__block
-            a.main__link(href="#")
+        .logo
+            a.logo__link(href="#")
                 img(src="", alt="")
-            .main__button
+            .logo__button
                 button.btn.btn__link
                     span.btn__title Оставить заявку
-    .modal-menu.menu
-        .menu__header
-            button.icon.icon__link
-        .menu__block
-            nav
+    include ../common/nav 
