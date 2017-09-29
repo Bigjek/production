@@ -13,7 +13,23 @@
   <body>
     <div class="wrapper">
       <div class="header">
-        <button class="header_btn"></button>
+        <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <nav class="nav" id="navigation">
+          <ul class="menu-main">
+            <li class="menu-main__item"><a class="menu-main__link" href="#">Showreel</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="#">Портфолио</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="#">Трансляции</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="#">Аэросъёмка</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="#">Подводная съёмка</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="#">Команда</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="#">Связаться с нами</a></li>
+          </ul>
+        </nav>
+        <div class="menu-close-block" id="menu-close-block"></div>
       </div>
       <main class="main">
         <div class="article">
@@ -31,24 +47,15 @@
           </div>
         </div>
       </main>
-      <div class="modal-menu menu">
-        <div class="menu__header">
-          <button class="icon icon__link"></button>
-        </div>
-        <div class="menu__block">
-          <nav class="nav">
-            <ul class="menu-main">
-              <li class="menu-main__item"><a class="menu-main__link" href="#">Showreel</a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#">Портфолио</a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#">Трансляции</a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#">Аэросъёмка</a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#">Подводная съёмка</a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#">Команда</a></li>
-              <li class="menu-main__item"><a class="menu-main__link" href="#">Связаться с нами</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <ul class="menu-main">
+        <li class="menu-main__item"><a class="menu-main__link" href="#">Showreel</a></li>
+        <li class="menu-main__item"><a class="menu-main__link" href="#">Портфолио</a></li>
+        <li class="menu-main__item"><a class="menu-main__link" href="#">Трансляции</a></li>
+        <li class="menu-main__item"><a class="menu-main__link" href="#">Аэросъёмка</a></li>
+        <li class="menu-main__item"><a class="menu-main__link" href="#">Подводная съёмка</a></li>
+        <li class="menu-main__item"><a class="menu-main__link" href="#">Команда</a></li>
+        <li class="menu-main__item"><a class="menu-main__link" href="#">Связаться с нами</a></li>
+      </ul>
     </div>
   </body>
   <script src="./assets/scripts/main.js" defer></script>

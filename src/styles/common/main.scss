@@ -1,8 +1,8 @@
 html{
-    @include desktop{
+    @include full{
         font-size: 16px;
     }
-    @include laptop{
+    @include desktop{
         font-size: 15px;
     }
     @include ipad{
@@ -11,4 +11,28 @@ html{
     @include iphone{
         font-size: 14px;
     }
+}
+body{
+    background: url('../img/bg.jpg') center fixed no-repeat; 
+    background-size: cover;
+    overflow: hidden;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+.header{
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+}
+.main{
+    display: flex;
+    flex: 1 0 auto;
+    padding: 0 120px;
+}
+.menu{
+    display: none;
 }

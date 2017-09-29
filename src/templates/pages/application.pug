@@ -1,0 +1,35 @@
+extends ../template
+
+block variables
+    - var title = 'Оставить заявку'
+
+block content
+    include ../common/header
+    main.main
+        .app
+            div.app__logo.logo
+                a.logo__link(href="#")
+                    img(src="", alt="")
+            form.form-order(action="")
+                label.visible-hidden(for="name")
+                input#name(type="text", name="name")
+
+                label.visible-hidden(for="email")
+                input#email(type="email", name="email")
+
+                label.visible-hidden(for="tel")
+                input#tel(type="tel", name="tel")
+
+                label.visible-hidden(for="tel")
+                textarea#description(name="description", cols="30", rows="10")
+
+                label.visible-hidden(for="file")
+                input#file(type="file", name="file")
+            
+                .app__button
+                    button.btn.btn__link(type="submite")
+                        span.btn__title Оставить заявку
+                    button.btn.btn__link(type="reset")
+                        span.btn__title Отмена
+
+    include ../common/nav 

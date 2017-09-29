@@ -1,3 +1,3 @@
-const slider = require ('./common/slider');
+const menu = require ('./common/menu');
 
-slider(); 
+menu(); 
