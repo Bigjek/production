@@ -15,6 +15,9 @@ h1{
 h2{
     font-size: 35px;
 }
+a{
+    text-decoration: none;
+}
 input, textarea{
     outline: none;
     border: 1px solid #fff;
@@ -27,6 +30,19 @@ input, textarea{
         border: 1px solid #7ba5ff;
     }
 }
+textarea{
+    resize: none;
+}
 ul, blockquote{
     margin: 0;
+}
+.visually-hidden{
+    position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }

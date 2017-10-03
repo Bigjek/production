@@ -28,6 +28,11 @@
         @content;
     }
 }
+@mixin ipad600{
+    @media (max-width: 600px){
+        @content;
+    }
+}
 @mixin iphone{
     @media (max-width: 320px){
         @content;

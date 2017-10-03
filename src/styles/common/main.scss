@@ -26,13 +26,23 @@ body{
     display: flex;
     flex: 0 0 11%;
     justify-content: flex-end;
+    min-height: 105px;
 }
 .main{
     display: flex;
-    flex: 0 0 68%;
+    flex: 1 0 68%;
     padding: 0 120px;
-    overflow: auto;
-    overflow-x: hidden;
+    // overflow: auto;
+    // overflow-x: hidden;
+    @include full{
+    }
+    @include desktop{
+    }
+    @include ipad{
+        padding: 0 3.75em;
+    }
+    @include iphone{
+    }
 }
 .menu{
     display: none;
@@ -47,11 +57,22 @@ body{
     }
     &__content{
         width: 79%;
+        .footer{
+            padding: 0;
+        }
+        &_w{
+            display: flex;
+            flex-flow: row wrap; 
+        }
     }
+
 }
 .footer{
     display: flex;
     flex: 0 0 21%;
     padding: 0 120px;
     justify-content: flex-start;
+}
+.title-h{
+    @include bb();
 }

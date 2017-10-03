@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Оставить заявку</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <nav class="nav" id="navigation">
+          <ul class="menu-main">
+            <li class="menu-main__item"><a class="menu-main__link" href="/">Showreel</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/portfolio.html">Портфолио</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/broadcast.html">Трансляции</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/article.html">Аэросъёмка</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/water.html">Подводная съёмка</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/team.html">Команда</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/contacts.html">Связаться с нами</a></li>
+          </ul>
+        </nav>
+        <div class="menu-close-block" id="menu-close-block"></div>
+      </div>
+      <main class="main">
+        <div class="contacts">
+          <aside class="contacts__logo logo logo_size"><a class="logo__link" href="/"><img class="logo-i" src="assets/img/svg/logo.svg" alt=""></a></aside>
+          <article class="contacts__content">
+            <form class="form-sub" action="#" method="post">
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="name"></label>
+                <input class="form-contact__name form-contact__name_b" type="text" name="name" placeholder="Имя" id="name">
+              </div>
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="email"></label>
+                <input class="form-contact__email form-contact__email_b" type="email" name="email" placeholder="Email" id="email">
+              </div>
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="tel"></label>
+                <input class="form-contact__tel form-contact__tel_b" type="tel" name="tel" placeholder="+7(___)___-__-__" id="tel">
+              </div>
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="description"></label>
+                <textarea class="form-contact__text form-contact__text_b" name="msg" cols="30" rows="5" placeholder="Опишите Вашу задачу..." id="description"></textarea>
+                <label class="file-upload"><span class="button">Выбрать</span>
+                  <mark>Если у Вас есть ТЗ, прикрепите его</mark>
+                  <input type="file">
+                </label>
+              </div>
+              <div class="form-contact__btn">
+                <button class="form-contact__sub btn" type="submit">Оставить заявку</button>
+                <button class="form-contact__back" type="button">Назад</button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="./assets/scripts/main.js" defer></script>
+</html>
