@@ -4,9 +4,13 @@
 html,
 body{
     height: 100%;
+    @include opensans(r);
+    color: #fff;
+    font-size: 20px;
 }
 h1{
-    font-size: 63px;
+    font-size: 36px;
+    @include bb();
 }
 h2{
     font-size: 35px;

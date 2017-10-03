@@ -23,19 +23,19 @@
             <li class="menu-main__item"><a class="menu-main__link" href="#">Showreel</a></li>
             <li class="menu-main__item"><a class="menu-main__link" href="#">Портфолио</a></li>
             <li class="menu-main__item"><a class="menu-main__link" href="#">Трансляции</a></li>
-            <li class="menu-main__item"><a class="menu-main__link" href="#">Аэросъёмка</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/article.html">Аэросъёмка</a></li>
             <li class="menu-main__item"><a class="menu-main__link" href="#">Подводная съёмка</a></li>
             <li class="menu-main__item"><a class="menu-main__link" href="#">Команда</a></li>
-            <li class="menu-main__item"><a class="menu-main__link" href="#">Связаться с нами</a></li>
+            <li class="menu-main__item"><a class="menu-main__link" href="/contacts.html">Связаться с нами</a></li>
           </ul>
         </nav>
         <div class="menu-close-block" id="menu-close-block"></div>
       </div>
       <main class="main">
         <div class="contacts">
-          <aside class="contacts__logo logo"><a class="logo__link" href="#"><img src="" alt=""></a></aside>
+          <aside class="contacts__logo logo logo_size"><a class="logo__link" href="/"><img class="logo-i" src="assets/img/svg/logo.svg" alt=""></a></aside>
           <article class="contacts__content">
-            <p>Если у Вас остались вопросы, свяжитесь с нами удобным для Вас способом и мы все обсудим принимаем звонки ежеднемно с 10:00 до 22:00, почта и мессенджеры – круглосуточно.</p>
+            <div class="contact-text">Если у Вас остались вопросы, свяжитесь с нами удобным для Вас способом и мы все обсудим <br/> принимаем звонки ежеднемно с 10:00 до 22:00, почта и мессенджеры – круглосуточно.</div>
             <div class="contact">
               <ul class="contact__list">
                 <li class="contact__item">
@@ -44,7 +44,7 @@
                       <use xlink:href="assets/img/sprite.svg#call"> </use>
                     </svg>
                   </div>
-                  <div class="contact__block"></div><a href="tel:+78126434215" type="tel">+7 (812) 643–42–15</a>
+                  <div class="contact__block"><a class="contact__link contact__link_s" href="tel:+78126434215" type="tel">+7 (812) 643–42–15</a></div>
                 </li>
                 <li class="contact__item">
                   <div class="contact__icon">
@@ -52,7 +52,7 @@
                       <use xlink:href="assets/img/sprite.svg#mail"> </use>
                     </svg>
                   </div>
-                  <div class="contact__block"> <a href="mailto:production@kino.rent" type="email">production@kino.rent</a></div>
+                  <div class="contact__block"> <a class="contact__link contact__link_s" href="mailto:production@kino.rent" type="email">production@kino.rent</a></div>
                 </li>
                 <li class="contact__item">
                   <div class="contact__icon">
@@ -60,7 +60,9 @@
                       <use xlink:href="assets/img/sprite.svg#telegram"> </use>
                     </svg>
                   </div>
-                  <div class="contact__block">@kino.rentprod</div>
+                  <div class="contact__block">
+                    <div class="contact__link contact__link_s">@kino.rentprod</div>
+                  </div>
                 </li>
                 <li class="contact__item">
                   <div class="contact__icon">
@@ -68,25 +70,20 @@
                       <use xlink:href="assets/img/sprite.svg#maps"> </use>
                     </svg>
                   </div>
-                  <div class="contact__block">Санкт-Петербург, м.Петроградская, Каменноостровский пр. 26–28</div>
+                  <div class="contact__block">
+                    <div class="contact__link">Санкт-Петербург, м.Петроградская, Каменноостровский пр. 26–28</div>
+                  </div>
                 </li>
               </ul>
             </div>
           </article>
-          <div class="contacts__button">
-            <button class="btn btn__link"><span class="btn__title">Оставить заявку</span></button>
-          </div>
         </div>
       </main>
-      <ul class="menu-main">
-        <li class="menu-main__item"><a class="menu-main__link" href="#">Showreel</a></li>
-        <li class="menu-main__item"><a class="menu-main__link" href="#">Портфолио</a></li>
-        <li class="menu-main__item"><a class="menu-main__link" href="#">Трансляции</a></li>
-        <li class="menu-main__item"><a class="menu-main__link" href="#">Аэросъёмка</a></li>
-        <li class="menu-main__item"><a class="menu-main__link" href="#">Подводная съёмка</a></li>
-        <li class="menu-main__item"><a class="menu-main__link" href="#">Команда</a></li>
-        <li class="menu-main__item"><a class="menu-main__link" href="#">Связаться с нами</a></li>
-      </ul>
+      <footer class="footer">
+        <div class="footer__button">
+          <button class="btn btn__link btn__link_top"><span class="btn__title">Оставить заявку</span></button>
+        </div>
+      </footer>
     </div>
   </body>
   <script src="./assets/scripts/main.js" defer></script>

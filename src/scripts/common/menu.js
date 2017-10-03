@@ -12,8 +12,13 @@ function menuInit(){
     });
   }
 
+  $('.hamburger').on('click', function(){
+    $('body').toggleClass('in-hidden');
+  });
+
   $('.menu-close-block').on('click', function(){
     $('.hamburger').removeClass('is-active');
+    $(document).find('.in-hidden').removeClass();
   });
 
 }
