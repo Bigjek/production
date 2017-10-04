@@ -14,9 +14,7 @@ html{
     }
 }
 body{
-    background: url('../img/bg.jpg') center fixed no-repeat; 
-    background-size: cover;
-    // overflow: hidden;
+    background: url('../img/bg.jpg') 0/cover fixed; 
 }
 .wrapper{
     display: flex;

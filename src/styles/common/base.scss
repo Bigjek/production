@@ -7,7 +7,6 @@ body{
     @include opensans(r);
     color: #fff;
     font-size: 20px;
-    background: #000;
 }
 h1{
     @include bb();
