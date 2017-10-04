@@ -4,12 +4,24 @@
 html,
 body{
     height: 100%;
+    @include opensans(r);
+    color: #fff;
+    font-size: 20px;
 }
 h1{
-    font-size: 63px;
+    @include bb();
+    @include ipad{
+       font-size: 30px; 
+    }
 }
 h2{
     font-size: 35px;
+    @include ipad{
+        font-size: 30px; 
+     }
+}
+a{
+    text-decoration: none;
 }
 input, textarea{
     outline: none;
@@ -23,6 +35,19 @@ input, textarea{
         border: 1px solid #7ba5ff;
     }
 }
+textarea{
+    resize: none;
+}
 ul, blockquote{
     margin: 0;
+}
+.visually-hidden{
+    position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }

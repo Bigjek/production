@@ -1,3 +1,11 @@
-const slider = require ('./common/slider');
+const $ = require('jquery');
+const menu = require ('./common/menu');
+const form = require ('./common/form');
 
-slider(); 
+if($('.hamburger').length){
+  menu();  
+}
+
+if($('.form-sub').length){
+  form();  
+}

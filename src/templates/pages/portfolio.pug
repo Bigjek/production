@@ -1,0 +1,35 @@
+extends ../template
+
+block variables
+    - var title = 'Портфолио'
+
+block content
+    .header 
+        .header-title
+            h1.header-title__mobil #{title}
+        include ../common/header
+
+    main.main
+        ul.portfolio
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src="https://www.youtube.com/embed/Y3hNyPKuEUU?showinfo=0", frameborder="0", allowfullscreen)
+                h2.portfolio__title.title-h Динамки
+                .portfolio__info 2017, Санкт-Петербург
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src="https://www.youtube.com/embed/Y3hNyPKuEUU?showinfo=0", frameborder="0", allowfullscreen)
+                h2.portfolio__title.title-h Динамки
+                .portfolio__info 2017, Санкт-Петербург
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src="https://www.youtube.com/embed/Y3hNyPKuEUU?showinfo=0", frameborder="0", allowfullscreen)
+                h2.portfolio__title.title-h Динамки
+                .portfolio__info 2017, Санкт-Петербург
+            li.portfolio__item
+                .portfolio__video
+                    iframe(type='text/html', width='480', height='270', src="https://www.youtube.com/embed/Y3hNyPKuEUU?showinfo=0", frameborder="0", allowfullscreen)
+                h2.portfolio__title.title-h Динамки
+                .portfolio__info 2017, Санкт-Петербург
+                
+            

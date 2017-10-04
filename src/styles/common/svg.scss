@@ -1,0 +1,32 @@
+.icon{
+    line-height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &-logo{
+        width: 480px;
+        height: 270px;
+        fill: white;
+        cursor: pointer;
+        color: #3FA9F5;
+        @include full{
+            
+        }
+        @include desktop{
+        
+        }
+        @include ipad{
+        
+        }
+        @include iphone{
+            width: 23px;
+            height: 23px;
+        }
+        &:hover{
+            fill: white;
+        }  
+    }
+    &-white{
+        fill: white;
+    }
+}

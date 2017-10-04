@@ -1,41 +1,24 @@
-@mixin roboto($style : r){
-    font-family: 'Roboto';
+@mixin opensans($style : r){
+    font-family: 'Open Sans';
     @if $style == r {
         font-style: normal;
-        font-weight: 400;
-    }
-    @if $style == b {
-        font-style: normal;
-        font-weight: 700;
-    }
-    @if $style == bi {
-        font-style: italic;
-        font-weight: 700;
-    }
-    @if $style == i {
-        font-style: italic;
-        font-weight: 400;
+        font-weight: 300;
     }
     @if $style == l {
         font-style: normal;
-        font-weight: 300;
-    }
-    @if $style == m {
-        font-style: normal;
-        font-weight: 500;
-    }
-    @if $style == li {
-        font-style: italic;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
+@mixin bb(){
+    font-family: 'BebasNeueBold';
+}
 
-@mixin desktop{
+@mixin full{
     @media (max-width: 1800px){
         @content;
     }
 }
-@mixin laptop{
+@mixin desktop{
     @media (max-width: 1200px){
         @content;
     }
@@ -45,8 +28,33 @@
         @content;
     }
 }
+@mixin ipad600{
+    @media (max-width: 600px){
+        @content;
+    }
+}
 @mixin iphone{
     @media (max-width: 320px){
         @content;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(150%);
+    }
+    // 50%{
+    //     transform: translateX(-8%);
+    // }
+    // 65%{
+    //     transform: translateX(4%);
+    // }
+    // 80%{
+    //     transform: translateX(-4%);
+    // }
+    // 95%{
+    //     transform: translateX(2%);
+    // }           
+    100% {
+        transform: translateX(0%);
     }
 }

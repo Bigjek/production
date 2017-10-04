@@ -1,0 +1,39 @@
+extends ../template
+
+block variables
+    - var title = 'Оставить заявку'
+
+block content
+    .header 
+        .header-title
+            h1.header-title__mobil #{title}
+        include ../common/header
+    main.main
+        .contacts
+            aside.contacts__logo.logo.logo_size
+                a.logo__link(href="/")
+                    img.logo-i(src="assets/img/svg/logo.svg", alt="")
+            article.contacts__content
+                form.form-sub(action="#" method="post")
+                    .input-group.input-group__block
+                        label.visually-hidden(for="name")
+                        input.form-contact__name.form-contact__name_b(type="text", name="name", placeholder="ФИО", id="name")
+                    .input-group.input-group__block
+                        label.visually-hidden(for="email")
+                        input.form-contact__email.form-contact__email_b(type="email", name="email" placeholder="Email", id="email")
+                    .input-group.input-group__block
+                        label.visually-hidden(for="tel")
+                        input.form-contact__tel.form-contact__tel_b(type="tel", name="tel" placeholder="+7(___)___-__-__", id="tel")
+                    .input-group.input-group__block
+                        label.visually-hidden(for="description")
+                        textarea.form-contact__text.form-contact__text_b(name="msg", cols="30", rows="5", placeholder="Опишите Вашу задачу...", id="description")
+
+                        label.file-upload
+                            span.button Выбрать
+                            mark Если у Вас есть ТЗ, прикрепите его
+                            input(type="file")
+
+                    .form-contact__btn
+                        button.form-contact__sub.btn(type="submit" disabled) Оставить заявку
+                        button.form-contact__back(type="button") Назад
+                    

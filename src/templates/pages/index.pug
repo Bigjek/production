@@ -1,12 +1,15 @@
 extends ../template
 
 block variables
-    - var title = 'Добро пожаловать'
+    - var title = 'Главная'
 
 block content
-
-    main.main
-        
-    footer.footer
-        .footer__bottom.footer__bottom_opacity 
-            .footer__bottom-copyright © 
+    .header 
+        include ../common/header
+    main.main.main_i
+        .logo
+            a.logo__link.logo__link_pos(href="/")
+                img.logo-i(src="assets/img/svg/logo.svg", alt="")
+            .logo__button
+                a.btn.btn__link(href="/form.html")
+                    span.btn__title Оставить заявку 

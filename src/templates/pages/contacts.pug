@@ -1,0 +1,44 @@
+extends ../template
+
+block variables
+    - var title = 'Связаться с нами'
+
+block content
+    .header 
+        .header-title
+            h1.header-title__mobil #{title}
+        include ../common/header
+    main.main
+        .contacts
+            aside.contacts__logo.logo.logo_size
+                a.logo__link(href="/")
+                    img.logo-i(src="assets/img/svg/logo.svg", alt="")
+            article.contacts__content
+                .contact-text Если у Вас остались вопросы, свяжитесь с нами удобным для Вас способом и мы все обсудим <br/> принимаем звонки ежеднемно с 10:00 до 22:00, почта и мессенджеры – круглосуточно.
+                .contact
+                    ul.contact__list
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#call") 
+                            .contact__block
+                                a.contact__link.contact__link_s(href="tel:+78126434215" type="tel") +7 (812) 643–42–15
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#mail") 
+                            .contact__block 
+                                a.contact__link.contact__link_s(href="mailto:production@kino.rent" type="email") production@kino.rent
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#telegram") 
+                            .contact__block
+                                .contact__link.contact__link_s @kino.rentprod
+                        li.contact__item
+                            .contact__icon
+                                svg(class="icon-white" width="32" height="32")
+                                    use(xlink:href="assets/img/sprite.svg#maps") 
+                            .contact__block
+                                .contact__link Санкт-Петербург, м.Петроградская, Каменноостровский пр. 26–28
+    include ../common/footer

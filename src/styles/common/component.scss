@@ -1,0 +1,409 @@
+.logo{
+    display: flex;
+    flex-direction: column;
+    @include ipad{
+        width: 100%;
+    }
+    &-i{
+        min-width: 480px;
+        width: 100%;
+        height: auto;
+        @include ipad{
+            min-width: 100%;
+        }
+    }
+    &__link{
+        align-items: flex-end;
+        display: flex;
+        height: 50%;
+        &_pos{
+            // margin-top: -65px;
+            margin-left: -5px;
+            align-items: center;
+        }
+    }
+    &__button{
+        align-items: center;
+        display: flex;
+        height: 50%;
+        @include ipad{
+            justify-content: center;
+        }
+    }
+    &_size{
+        max-width: 240px;
+        width: 100%;
+        .logo-i{
+            min-width: 100%;
+            margin-bottom: 1em;
+        }
+    }
+}
+.btn{
+    @include bb();
+    font-size: 50px;
+    color: white;
+    background: none;
+    border: 3px solid white;
+    padding: 2px 35px;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7; 
+    }
+    &__link{
+        @include ipad{
+            padding: 0 1em;
+        }
+        @include ipad600{
+            font-size: 30px;
+        }
+        &_top{
+            margin: 20px 0;
+            display: inline-block;
+        }
+    }
+}
+.nav{
+    position: absolute;
+    background: #212121;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 624px;
+    z-index: 1;
+    padding: 120px 24px 24px 83px;
+    overflow: auto;
+    visibility: hidden;
+    @include full{
+    }
+    @include desktop{
+    }
+    @include ipad{
+        width: 100%;
+        left: 0;
+        padding: 100px 75px 10px 30px;
+    }
+    @include ipad600{
+    }
+    @include iphone{
+        padding: 75px 75px 10px 10px;
+    }
+}
+.menu-close-block{
+    position: absolute;;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    z-index: 0;
+}
+.hamburger{
+    margin-left: auto;
+    &.is-active{
+         + .nav{
+            animation-name: slideLeft;
+            animation-duration: .5s; 
+            animation-timing-function: ease-in-out;    
+            visibility: visible !important; 
+            + .menu-close-block{
+                display: block;
+                opacity: 0.7;
+                background: #000;
+                overflow: hidden;
+                position: fixed;
+            }
+        }
+         
+    }
+}
+.in-hidden{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+.menu-main{
+    list-style: none;
+    padding: 0;
+    &__item{
+        margin: 35px 0;
+        @include iphone{
+            margin: 15px 0;
+        }
+    }
+    &__link{
+        @include bb();
+        font-size: 50px;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        padding: 0 35px;
+        z-index: 2;
+        @include ipad600{
+            font-size: 28px;   
+            padding: 0;         
+        }
+        &:before{
+            content: '';
+            top: 20px;
+            position: absolute;
+            height: 15px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        &:hover{
+            &:before{
+                background: #fb3b3b;
+            }
+        }
+    }
+}
+.contact{
+    &-text{
+        padding: 2em 0;
+    }
+    &__list{
+        list-style: none;
+        padding: 1em 0;
+    }
+    &__item{
+       display: flex;
+       align-items: center;
+       padding: 5px 0; 
+       &:last-child{
+            margin-top: 3em;
+       }
+    }
+    &__icon{
+        display: inline-block;
+    }
+    &__block{
+        display: inline-block;
+
+    }
+    &__link{
+        color: white;
+        text-decoration: none;
+        padding-left: 30px;
+        &:hover, &:focus, &:active{
+            color: parentColor;
+            opacity: 0.7;
+        }
+        &_s{
+            font-size: 26px;
+        }
+    }
+
+}
+.contacts{
+    @include ipad{
+        width: 100%;
+    }
+    &__logo{
+        @include ipad{
+            visibility: hidden;
+        }
+    }
+}
+.block{
+    &-info{
+        &__img{
+            width: 100%;
+        }
+    }
+    &-img{
+        display: flex;
+        flex-direction: column;
+        width: 33.3%;
+        padding:  0 2em;
+        @include full{
+        }
+        @include desktop{
+            width: 50%;
+        }
+        @include ipad{
+            width: 100%;
+            padding: 0;
+        }
+        @include ipad600{
+        }
+        @include iphone{
+        }
+        &__img{
+            width: 100%;
+            height: auto;
+        }
+        &__content{
+            margin-bottom: 5em;
+        }
+    }
+}
+.portfolio{
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap; 
+    width: 100%;
+    @include full{
+    }
+    @include desktop{
+    }
+    @include ipad{
+        flex-direction: column;
+    }
+    @include ipad600{
+    }
+    @include iphone{
+    }
+    &__video{
+        iframe{
+            width: 100%;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        width: 33.3%;
+        padding:  0 2em;
+        &__img{
+            width: 100%;
+            height: auto;
+        }
+        &__content{
+            margin-bottom: 5em;
+        }
+        @include full{
+        }
+        @include desktop{
+            width: 50%;
+        }
+        @include ipad{
+            width: 100%;
+            padding: 0;
+        }
+        @include ipad600{
+        }
+        @include iphone{
+        }
+    }
+    &__title{
+        margin-bottom: 5px;
+    }
+    &__info{
+        margin-bottom: 45px;
+    }
+}
+.form-contact{
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 3em 0;
+        @include ipad{
+            flex-direction: column;
+            button{
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &__sub{
+        @include ipad600{
+            font-size: 28px;
+        }
+    }
+    &__back{
+        @include bb();
+        color: #e43834;
+        border: 0;
+        background: none;
+        font-size: 26px;
+        margin-right: 3em;
+        cursor: pointer;
+        @include full{
+        }
+        @include desktop{
+        }
+        @include ipad{
+            margin: 0 3em;
+        }
+        @include iphone{
+        }
+        &:hover{
+            opacity: .7;
+        }
+        &:active, &:focus{
+            color: currentColor;
+        }
+    }
+}
+.form-sub{
+    min-width: 600px;
+    width: 100%;   
+    @include full{
+    }
+    @include desktop{
+    }
+    @include ipad{
+        min-width: 100%;
+    }
+    @include iphone{
+    } 
+    input, textarea{
+        width: 100%;
+        background: none;
+        border: 2px solid white;
+        margin: 10px 0;
+        padding: 20px;
+        color: currentColor;
+    }
+}
+
+.file-upload{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-size: 1em;              /* example */
+    height: 3em;                 /* example */
+    line-height: 2.8em;
+    border: 2px solid white;
+    margin-top: -15px;
+    .button, > mark{
+        display: block;
+        cursor: pointer ;
+    }
+    .button{
+        float: right;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 8em;                  /* example */
+        height: 100%;
+        text-align: center;         /* example */
+        @include bb();
+        font-size: 26px;
+        border-left: 2px solid;
+    }
+    > mark{
+        background: transparent;     /* example */
+        padding-left: 1em;          /* example */
+        color: white;
+    }
+    input[type=file]{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        height: 1px;
+    }    
+
+}
+@media only screen and ( max-width: 480px ){  /* example */
+    .file_upload > mark{
+        display: none
+    }
+    .file_upload .button{
+        width: 100%
+    }
+}
+
+
