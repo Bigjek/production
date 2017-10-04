@@ -7,6 +7,7 @@ html{
     }
     @include ipad{
         font-size: 14px;
+        line-height: 1.4;
     }
     @include iphone{
         font-size: 14px;
@@ -25,23 +26,50 @@ body{
 .header{
     display: flex;
     flex: 0 0 11%;
-    justify-content: flex-end;
+    justify-content: flex-start;
     min-height: 105px;
+    &-title{
+        display: flex;
+        align-items: center;
+        visibility: hidden;
+        @include ipad{
+            visibility: visible;
+        }
+        &__mobil{
+            margin: 0;
+            padding: 5px 30px;
+            background: #e43834;
+        }
+    }
 }
 .main{
     display: flex;
     flex: 1 0 68%;
     padding: 0 120px;
-    // overflow: auto;
-    // overflow-x: hidden;
     @include full{
     }
     @include desktop{
+        padding: 0 3.75em;
+        flex: 0 0 auto;
     }
     @include ipad{
-        padding: 0 3.75em;
+        padding: 0 1.7em;
+        padding-top: 60px;
+    }
+    @include ipad600{
+        padding: 0 1.75em;
     }
     @include iphone{
+        padding: 0 1em;
+    }
+    &_i{
+        flex: 1 0 auto;
+        @include ipad{
+            .logo__link{
+                padding: 0 3em;
+            }  
+        }
+        
     }
 }
 .menu{
@@ -54,9 +82,32 @@ body{
     justify-content: space-between;
     &__logo{
         width: 21%;
+        padding-right: 20px;
+        @include full{
+        }
+        @include desktop{
+        }
+        @include ipad{
+            display: none;
+        }
+        @include ipad600{
+        }
+        @include iphone{
+        }
     }
     &__content{
         width: 79%;
+        @include full{
+        }
+        @include desktop{
+        }
+        @include ipad{
+            width: 100%;
+        }
+        @include ipad600{
+        }
+        @include iphone{
+        }
         .footer{
             padding: 0;
         }
@@ -72,6 +123,14 @@ body{
     flex: 0 0 21%;
     padding: 0 120px;
     justify-content: flex-start;
+    @include ipad{
+        padding: 0 1.7em;
+    }
+    @include ipad600{
+    }
+    @include iphone{
+        padding: 0 1em;
+    }
 }
 .title-h{
     @include bb();

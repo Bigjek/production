@@ -12,7 +12,10 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="header">
+      <div class="header"> 
+        <div class="header-title">
+          <h1 class="header-title__mobil">Оставить заявку</h1>
+        </div>
         <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
@@ -38,7 +41,7 @@
             <form class="form-sub" action="#" method="post">
               <div class="input-group input-group__block">
                 <label class="visually-hidden" for="name"></label>
-                <input class="form-contact__name form-contact__name_b" type="text" name="name" placeholder="Имя" id="name">
+                <input class="form-contact__name form-contact__name_b" type="text" name="name" placeholder="ФИО" id="name">
               </div>
               <div class="input-group input-group__block">
                 <label class="visually-hidden" for="email"></label>
@@ -57,7 +60,7 @@
                 </label>
               </div>
               <div class="form-contact__btn">
-                <button class="form-contact__sub btn" type="submit">Оставить заявку</button>
+                <button class="form-contact__sub btn" type="submit" disabled>Оставить заявку</button>
                 <button class="form-contact__back" type="button">Назад</button>
               </div>
             </form>

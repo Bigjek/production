@@ -4,7 +4,10 @@ block variables
     - var title = 'Оставить заявку'
 
 block content
-    include ../common/header
+    .header 
+        .header-title
+            h1.header-title__mobil #{title}
+        include ../common/header
     main.main
         .app
             div.app__logo.logo

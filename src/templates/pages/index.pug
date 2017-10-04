@@ -4,11 +4,12 @@ block variables
     - var title = 'Главная'
 
 block content
-    include ../common/header
-    main.main
+    .header 
+        include ../common/header
+    main.main.main_i
         .logo
             a.logo__link.logo__link_pos(href="/")
                 img.logo-i(src="assets/img/svg/logo.svg", alt="")
             .logo__button
                 a.btn.btn__link(href="/form.html")
-                    span.btn__title Оставить заявку    
+                    span.btn__title Оставить заявку 

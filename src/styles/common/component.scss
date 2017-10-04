@@ -1,24 +1,34 @@
 .logo{
     display: flex;
     flex-direction: column;
+    @include ipad{
+        width: 100%;
+    }
     &-i{
         min-width: 480px;
         width: 100%;
         height: auto;
+        @include ipad{
+            min-width: 100%;
+        }
     }
     &__link{
         align-items: flex-end;
         display: flex;
         height: 50%;
         &_pos{
-            margin-top: -65px;
+            // margin-top: -65px;
             margin-left: -5px;
+            align-items: center;
         }
     }
     &__button{
         align-items: center;
         display: flex;
         height: 50%;
+        @include ipad{
+            justify-content: center;
+        }
     }
     &_size{
         max-width: 240px;
@@ -35,14 +45,20 @@
     color: white;
     background: none;
     border: 3px solid white;
-    padding: 8px 35px;
+    padding: 2px 35px;
     cursor: pointer;
     &:hover{
         opacity: 0.7; 
     }
     &__link{
+        @include ipad{
+            padding: 0 1em;
+        }
+        @include ipad600{
+            font-size: 30px;
+        }
         &_top{
-            margin-top: 20px;
+            margin: 20px 0;
             display: inline-block;
         }
     }
@@ -58,7 +74,20 @@
     padding: 120px 24px 24px 83px;
     overflow: auto;
     visibility: hidden;
-    
+    @include full{
+    }
+    @include desktop{
+    }
+    @include ipad{
+        width: 100%;
+        left: 0;
+        padding: 100px 75px 10px 30px;
+    }
+    @include ipad600{
+    }
+    @include iphone{
+        padding: 75px 75px 10px 10px;
+    }
 }
 .menu-close-block{
     position: absolute;;
@@ -70,6 +99,7 @@
     z-index: 0;
 }
 .hamburger{
+    margin-left: auto;
     &.is-active{
          + .nav{
             animation-name: slideLeft;
@@ -80,6 +110,8 @@
                 display: block;
                 opacity: 0.7;
                 background: #000;
+                overflow: hidden;
+                position: fixed;
             }
         }
          
@@ -87,12 +119,17 @@
 }
 .in-hidden{
     overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 .menu-main{
     list-style: none;
     padding: 0;
     &__item{
         margin: 35px 0;
+        @include iphone{
+            margin: 15px 0;
+        }
     }
     &__link{
         @include bb();
@@ -102,6 +139,10 @@
         position: relative;
         padding: 0 35px;
         z-index: 2;
+        @include ipad600{
+            font-size: 28px;   
+            padding: 0;         
+        }
         &:before{
             content: '';
             top: 20px;
@@ -159,6 +200,11 @@
     @include ipad{
         width: 100%;
     }
+    &__logo{
+        @include ipad{
+            visibility: hidden;
+        }
+    }
 }
 .block{
     &-info{
@@ -171,6 +217,19 @@
         flex-direction: column;
         width: 33.3%;
         padding:  0 2em;
+        @include full{
+        }
+        @include desktop{
+            width: 50%;
+        }
+        @include ipad{
+            width: 100%;
+            padding: 0;
+        }
+        @include ipad600{
+        }
+        @include iphone{
+        }
         &__img{
             width: 100%;
             height: auto;
@@ -185,6 +244,17 @@
     display: flex;
     flex-flow: row wrap; 
     width: 100%;
+    @include full{
+    }
+    @include desktop{
+    }
+    @include ipad{
+        flex-direction: column;
+    }
+    @include ipad600{
+    }
+    @include iphone{
+    }
     &__video{
         iframe{
             width: 100%;
@@ -202,6 +272,19 @@
         &__content{
             margin-bottom: 5em;
         }
+        @include full{
+        }
+        @include desktop{
+            width: 50%;
+        }
+        @include ipad{
+            width: 100%;
+            padding: 0;
+        }
+        @include ipad600{
+        }
+        @include iphone{
+        }
     }
     &__title{
         margin-bottom: 5px;
@@ -215,13 +298,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 3em;
-        @include ipad600{
+        margin: 3em 0;
+        @include ipad{
             flex-direction: column;
+            button{
+                margin-bottom: 25px;
+            }
         }
     }
     &__sub{
-
+        @include ipad600{
+            font-size: 28px;
+        }
     }
     &__back{
         @include bb();
@@ -230,6 +318,7 @@
         background: none;
         font-size: 26px;
         margin-right: 3em;
+        cursor: pointer;
         @include full{
         }
         @include desktop{
@@ -265,6 +354,7 @@
         border: 2px solid white;
         margin: 10px 0;
         padding: 20px;
+        color: currentColor;
     }
 }
 

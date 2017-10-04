@@ -4,7 +4,10 @@ block variables
     - var title = 'Связаться с нами'
 
 block content
-    include ../common/header
+    .header 
+        .header-title
+            h1.header-title__mobil #{title}
+        include ../common/header
     main.main
         .contacts
             aside.contacts__logo.logo.logo_size

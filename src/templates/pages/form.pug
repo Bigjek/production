@@ -4,7 +4,10 @@ block variables
     - var title = 'Оставить заявку'
 
 block content
-    include ../common/header
+    .header 
+        .header-title
+            h1.header-title__mobil #{title}
+        include ../common/header
     main.main
         .contacts
             aside.contacts__logo.logo.logo_size
@@ -14,7 +17,7 @@ block content
                 form.form-sub(action="#" method="post")
                     .input-group.input-group__block
                         label.visually-hidden(for="name")
-                        input.form-contact__name.form-contact__name_b(type="text", name="name", placeholder="Имя", id="name")
+                        input.form-contact__name.form-contact__name_b(type="text", name="name", placeholder="ФИО", id="name")
                     .input-group.input-group__block
                         label.visually-hidden(for="email")
                         input.form-contact__email.form-contact__email_b(type="email", name="email" placeholder="Email", id="email")
@@ -31,6 +34,6 @@ block content
                             input(type="file")
 
                     .form-contact__btn
-                        button.form-contact__sub.btn(type="submit") Оставить заявку
+                        button.form-contact__sub.btn(type="submit" disabled) Оставить заявку
                         button.form-contact__back(type="button") Назад
                     
