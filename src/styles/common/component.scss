@@ -382,9 +382,9 @@
     height: 3em;                 /* example */
     line-height: 2.8em;
     border: 2px solid white;
-    margin-top: -15px;
+    margin-top: -11px;
     @include ipad{
-        margin-top: 0;
+        margin-top: 10px;
     }
     .button, > mark{
         display: block;
@@ -419,6 +419,30 @@
     }    
 
 }
+
+.input-group{
+    &__block{
+        display: flex;
+        align-items: center;
+        position: relative;
+        input, textarea{
+            &.error{
+                border-color: #861414;
+            }
+        } 
+        label.error{
+            position: absolute;
+            margin-right: 4px;
+            right: 0;
+            bottom: 15px;
+            font-size: 16px;
+            color: #ffffff;
+            background: #861414;
+            padding: 0 2px;
+        }
+    }
+}
+
 @media only screen and ( max-width: 480px ){  /* example */
     .file_upload > mark{
         display: none
