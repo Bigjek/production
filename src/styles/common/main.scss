@@ -1,5 +1,4 @@
 html{
-    background-color: #000;
     @include full{
         font-size: 16px;
     }
@@ -15,9 +14,12 @@ html{
     }
 }
 body{   
-    background: url('../img/bg.jpg') center 0/cover fixed; 
+    background-color: #000;
+    background-image: url('../img/bg.jpg'); 
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
+    background-size: cover;
     margin: 0;
 }
 .wrapper{
