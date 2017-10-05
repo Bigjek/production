@@ -13,10 +13,11 @@ html{
         font-size: 14px;
     }
 }
-body{
-    background: url('../img/bg.jpg') center 0/cover fixed; 
+body{   
+    background: url('../img/bg.jpg') 50% 100% no-repeat; 
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
 }
 .wrapper{
     display: flex;
