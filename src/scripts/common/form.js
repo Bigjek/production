@@ -1,4 +1,8 @@
+
 const $ = require('jquery');
+const valudForm = require('jquery-validation');
+const maskForm = require('jquery-mask-plugin');
+
 // инициализация
 function formInit(){
   var wrapper = $( '.file-upload' ),
@@ -35,8 +39,46 @@ function formInit(){
   $( window ).resize(function(){
     $( '.file-upload input' ).triggerHandler( 'change' );
   });
-    
 
+  //Validate form
+
+  $('#myOrder').validate({
+    rules:{
+      'name':{
+        required: true,
+      },
+      'email':{
+        required: true, email: true,
+      },
+      'tel':{
+        required: true,
+      },
+      'msg':{
+        required: true,
+      },
+    },
+    messages:{
+      'name':{
+        required: 'Не заполнено',
+      },
+      'email':{
+        required: 'Не заполнено', email: 'Неверные данные',
+      },
+      'tel':{
+        required: 'Не заполнено',
+      },
+      'msg':{
+        required: 'Не заполнено',
+      },
+    },
+    submitHandler: function(form) {
+      alert('Данные будут отправлены после создания админки');
+      $(form).submit(false);
+    },
+  });
+
+  $('#tel').mask('+7(000) 000-00-00');
+  
 }
 
 module.exports = formInit;
