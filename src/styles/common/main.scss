@@ -14,7 +14,9 @@ html{
     }
 }
 body{
-    background: url('../img/bg.jpg') center  0/cover fixed; 
+    background: url('../img/bg.jpg') center 0/cover fixed; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .wrapper{
     display: flex;
@@ -35,7 +37,7 @@ body{
         }
         &__mobil{
             margin: 0;
-            padding: 5px 30px;
+            padding: 5px 15px 5px 30px;
             background: #e43834;
         }
     }

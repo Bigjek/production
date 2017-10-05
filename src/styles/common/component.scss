@@ -45,7 +45,7 @@
     color: white;
     background: none;
     border: 3px solid white;
-    padding: 2px 35px;
+    padding: 9px 35px;
     cursor: pointer;
     &:hover{
         opacity: 0.7; 
@@ -86,7 +86,7 @@
     @include ipad600{
     }
     @include iphone{
-        padding: 75px 75px 10px 10px;
+        padding: 75px 75px 10px 20px;
     }
 }
 .menu-close-block{
@@ -368,6 +368,9 @@
         margin: 10px 0;
         padding: 20px;
         color: currentColor;
+        @include ipad600{
+            padding: 15px;
+        }
     }
 }
 
@@ -380,6 +383,9 @@
     line-height: 2.8em;
     border: 2px solid white;
     margin-top: -15px;
+    @include ipad{
+        margin-top: 0;
+    }
     .button, > mark{
         display: block;
         cursor: pointer ;
@@ -394,6 +400,9 @@
         @include bb();
         font-size: 26px;
         border-left: 2px solid;
+        @include ipad600{
+            width: 5em;  
+        }
     }
     > mark{
         background: transparent;     /* example */
