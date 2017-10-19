@@ -317,6 +317,8 @@
         align-items: center;
         justify-content: space-between;
         margin: 3em 0;
+        z-index: 2;
+        position: relative;
         @include ipad{
             flex-direction: column;
             button{
@@ -391,6 +393,16 @@
     @include ipad{
         margin-top: 10px;
     }
+    input.error{
+        + .error{
+            background: #861414;
+            padding: 0 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    }
     .button, > mark{
         display: block;
         cursor: pointer ;
@@ -405,6 +417,8 @@
         @include bb();
         font-size: 26px;
         border-left: 2px solid;
+        z-index: 1;
+        position: relative;
         @include ipad600{
             width: 5em;  
         }
@@ -458,3 +472,134 @@
 }
 
 
+.bubblingG {
+	text-align: center;
+	width:220px;
+	height:138px;
+	margin: auto;
+}
+
+.bubblingG span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28px;
+	height: 28px;
+	margin: 69px auto;
+	background: rgba(255,255,255,0.89);
+	border-radius: 138px;
+		-o-border-radius: 138px;
+		-ms-border-radius: 138px;
+		-webkit-border-radius: 138px;
+		-moz-border-radius: 138px;
+	animation: bubblingG 1.5s infinite alternate;
+		-o-animation: bubblingG 1.5s infinite alternate;
+		-ms-animation: bubblingG 1.5s infinite alternate;
+		-webkit-animation: bubblingG 1.5s infinite alternate;
+		-moz-animation: bubblingG 1.5s infinite alternate;
+}
+
+#bubblingG_1 {
+	animation-delay: 0s;
+		-o-animation-delay: 0s;
+		-ms-animation-delay: 0s;
+		-webkit-animation-delay: 0s;
+		-moz-animation-delay: 0s;
+}
+
+#bubblingG_2 {
+	animation-delay: 0.45s;
+		-o-animation-delay: 0.45s;
+		-ms-animation-delay: 0.45s;
+		-webkit-animation-delay: 0.45s;
+		-moz-animation-delay: 0.45s;
+}
+
+#bubblingG_3 {
+	animation-delay: 0.9s;
+		-o-animation-delay: 0.9s;
+		-ms-animation-delay: 0.9s;
+		-webkit-animation-delay: 0.9s;
+		-moz-animation-delay: 0.9s;
+}
+
+
+
+@keyframes bubblingG {
+	0% {
+		width: 28px;
+		height: 28px;
+		background-color:rgb(0,0,0);
+		transform: translateY(0);
+	}
+
+	100% {
+		width: 66px;
+		height: 66px;
+		background-color:rgb(255,255,255);
+		transform: translateY(-58px);
+	}
+}
+
+@-o-keyframes bubblingG {
+	0% {
+		width: 28px;
+		height: 28px;
+		background-color:rgb(0,0,0);
+		-o-transform: translateY(0);
+	}
+
+	100% {
+		width: 66px;
+		height: 66px;
+		background-color:rgb(255,255,255);
+		-o-transform: translateY(-58px);
+	}
+}
+
+@-ms-keyframes bubblingG {
+	0% {
+		width: 28px;
+		height: 28px;
+		background-color:rgb(0,0,0);
+		-ms-transform: translateY(0);
+	}
+
+	100% {
+		width: 66px;
+		height: 66px;
+		background-color:rgb(255,255,255);
+		-ms-transform: translateY(-58px);
+	}
+}
+
+@-webkit-keyframes bubblingG {
+	0% {
+		width: 28px;
+		height: 28px;
+		background-color:rgb(0,0,0);
+		-webkit-transform: translateY(0);
+	}
+
+	100% {
+		width: 66px;
+		height: 66px;
+		background-color:rgb(255,255,255);
+		-webkit-transform: translateY(-58px);
+	}
+}
+
+@-moz-keyframes bubblingG {
+	0% {
+		width: 28px;
+		height: 28px;
+		background-color:rgb(0,0,0);
+		-moz-transform: translateY(0);
+	}
+
+	100% {
+		width: 66px;
+		height: 66px;
+		background-color:rgb(255,255,255);
+		-moz-transform: translateY(-58px);
+	}
+}

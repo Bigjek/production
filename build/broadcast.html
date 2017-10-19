@@ -47,11 +47,48 @@
               </div>
             </div>
             <footer class="footer">
-              <div class="footer__button"><a class="btn btn__link btn__link_top" href="form.html">Оставить заявку</a></div>
+              <div class="footer__button">
+                <button class="btn btn__link btn__link_top btn-order" href="form.html">Оставить заявку</button>
+              </div>
             </footer>
           </article>
         </div>
       </main>
+      <div class="modal modal-order">
+        <div class="contacts">
+          <aside class="contacts__logo logo logo_size"><a class="logo__link" href="index.html"><img class="logo-i" src="assets/img/svg/logo.svg" alt=""></a></aside>
+          <article class="contacts__content">
+            <form class="form-sub" id="myOrder">
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="name"></label>
+                <input class="form-contact__name form-contact__name_b" type="text" name="name" placeholder="ФИО" id="name" required>
+              </div>
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="email"></label>
+                <input class="form-contact__email form-contact__email_b" type="email" name="email" placeholder="Email" id="email" required>
+              </div>
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="tel"></label>
+                <input class="form-contact__tel form-contact__tel_b" type="tel" name="tel" placeholder="+7(___)___-__-__" id="tel" required>
+              </div>
+              <div class="input-group input-group__block">
+                <label class="visually-hidden" for="description"></label>
+                <textarea class="form-contact__text form-contact__text_b" name="msg" cols="30" rows="5" placeholder="Опишите Вашу задачу..." id="description" required></textarea>
+              </div>
+              <div class="input-group">
+                <label class="file-upload"><span class="button">Выбрать</span>
+                  <mark>Если у Вас есть ТЗ, прикрепите его</mark>
+                  <input type="file" name="pack" id="pack">
+                </label>
+              </div>
+              <div class="form-contact__btn">
+                <button class="form-contact__sub btn" type="submit">Оставить заявку</button>
+                <button class="form-contact__back" type="button">Назад</button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </div>
     </div>
   </body>
   <script src="./assets/scripts/main.js" defer></script>

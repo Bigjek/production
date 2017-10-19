@@ -44,7 +44,7 @@ const paths = {
         src: 'src/fonts/**/*.*',
         dest: 'build/assets/fonts/'
     },
-    svg:{
+    svg: {
         src: 'src/img/icons/**/*.svg',
         dest: 'build/assets/img/'
     }
@@ -74,20 +74,21 @@ function styles() {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: require('node-normalize-scss').includePaths,
-            outputStyle: 'compressed'}))
+            outputStyle: 'compressed'
+        }))
         .pipe(autoprefixer({
             browsers: ['last 15 versions'],
             cascade: false
         }))
-        .pipe(sourcemaps.write())        
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.styles.dest))       
+        .pipe(sourcemaps.write())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest(paths.styles.dest))
 }
 
 // webpack
 function scripts() {
     return gulp.src('src/scripts/main.js')
-        .pipe(plumber())  
+        // .pipe(plumber())  
         .pipe(gulpWebpack(webpackConfig, webpack))
         .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -102,10 +103,10 @@ function images() {
     return gulp.src(paths.images.src)
         .pipe(imagemin(
             [
-                imagemin.gifsicle({interlaced: true}),
-                imagemin.jpegtran({progressive: true}),
-                imagemin.optipng({optimizationLevel: 5}),
-                imagemin.svgo({plugins: [{removeViewBox: true}]})
+                imagemin.gifsicle({ interlaced: true }),
+                imagemin.jpegtran({ progressive: true }),
+                imagemin.optipng({ optimizationLevel: 5 }),
+                imagemin.svgo({ plugins: [{ removeViewBox: true }] })
             ]
         ))
         .pipe(gulp.dest(paths.images.dest));
@@ -129,7 +130,7 @@ function watch() {
 // следим за build и перезапускаем браузер
 function server() {
     browserSync.init({
-        server: paths.root   
+        server: paths.root
     });
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
@@ -157,24 +158,24 @@ gulp.task('build', gulp.series(
 
 gulp.task('sprite', function() {
     return gulp.src(paths.svg.src)
-      .pipe(svgmin({
-        js2svg: {
-          pretty: true
-        }
-      }))
-      // удалить все атрибуты в svg
-      .pipe(cheerio({
-        run: function($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: {
-          xmlMode: true
-        }
-      }))
-      .pipe(replace('&gt;', '>'))
-      // build svg sprite
-      .pipe(svgSprite(config))
-      .pipe(gulp.dest(paths.svg.dest));
-  });
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        // удалить все атрибуты в svg
+        .pipe(cheerio({
+            run: function($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {
+                xmlMode: true
+            }
+        }))
+        .pipe(replace('&gt;', '>'))
+        // build svg sprite
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest(paths.svg.dest));
+});
